@@ -16,5 +16,26 @@ namespace FuerstFinal1._0
         {
             InitializeComponent();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //ALLOW USER TO DELETE THIS ANIMAL
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //ALLOW USER TO SAVE CHANGES TO ANIMAL
+        }
     }
 }

@@ -27,5 +27,10 @@ namespace FuerstFinal1._0
             this.Owner.Show();
             this.Close();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //ADD THIS LATER TO WRITE TO TEXT FILE
+        }
     }
 }
