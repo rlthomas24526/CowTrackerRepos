@@ -35,13 +35,13 @@
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.grpGender = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.radFemale = new System.Windows.Forms.RadioButton();
             this.radMale = new System.Windows.Forms.RadioButton();
+            this.radFemale = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblHerd = new System.Windows.Forms.Label();
-            this.radMine = new System.Windows.Forms.RadioButton();
             this.radNotMine = new System.Windows.Forms.RadioButton();
+            this.radMine = new System.Windows.Forms.RadioButton();
+            this.lblHerd = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblBirthdate = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -72,6 +72,7 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnBack
             // 
@@ -119,14 +120,16 @@
             this.grpGender.TabStop = false;
             this.grpGender.Text = "groupBox1";
             // 
-            // label2
+            // radMale
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Gender";
+            this.radMale.AutoSize = true;
+            this.radMale.Location = new System.Drawing.Point(156, 13);
+            this.radMale.Name = "radMale";
+            this.radMale.Size = new System.Drawing.Size(48, 17);
+            this.radMale.TabIndex = 2;
+            this.radMale.TabStop = true;
+            this.radMale.Text = "Male";
+            this.radMale.UseVisualStyleBackColor = true;
             // 
             // radFemale
             // 
@@ -140,16 +143,14 @@
             this.radFemale.Text = "Female";
             this.radFemale.UseVisualStyleBackColor = true;
             // 
-            // radMale
+            // label2
             // 
-            this.radMale.AutoSize = true;
-            this.radMale.Location = new System.Drawing.Point(156, 13);
-            this.radMale.Name = "radMale";
-            this.radMale.Size = new System.Drawing.Size(48, 17);
-            this.radMale.TabIndex = 2;
-            this.radMale.TabStop = true;
-            this.radMale.Text = "Male";
-            this.radMale.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Gender";
             // 
             // groupBox1
             // 
@@ -163,14 +164,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // lblHerd
+            // radNotMine
             // 
-            this.lblHerd.AutoSize = true;
-            this.lblHerd.Location = new System.Drawing.Point(12, 20);
-            this.lblHerd.Name = "lblHerd";
-            this.lblHerd.Size = new System.Drawing.Size(30, 13);
-            this.lblHerd.TabIndex = 0;
-            this.lblHerd.Text = "Herd";
+            this.radNotMine.AutoSize = true;
+            this.radNotMine.Location = new System.Drawing.Point(156, 15);
+            this.radNotMine.Name = "radNotMine";
+            this.radNotMine.Size = new System.Drawing.Size(68, 17);
+            this.radNotMine.TabIndex = 2;
+            this.radNotMine.TabStop = true;
+            this.radNotMine.Text = "Not Mine";
+            this.radNotMine.UseVisualStyleBackColor = true;
             // 
             // radMine
             // 
@@ -184,16 +187,14 @@
             this.radMine.Text = "Mine";
             this.radMine.UseVisualStyleBackColor = true;
             // 
-            // radNotMine
+            // lblHerd
             // 
-            this.radNotMine.AutoSize = true;
-            this.radNotMine.Location = new System.Drawing.Point(156, 15);
-            this.radNotMine.Name = "radNotMine";
-            this.radNotMine.Size = new System.Drawing.Size(68, 17);
-            this.radNotMine.TabIndex = 2;
-            this.radNotMine.TabStop = true;
-            this.radNotMine.Text = "Not Mine";
-            this.radNotMine.UseVisualStyleBackColor = true;
+            this.lblHerd.AutoSize = true;
+            this.lblHerd.Location = new System.Drawing.Point(12, 20);
+            this.lblHerd.Name = "lblHerd";
+            this.lblHerd.Size = new System.Drawing.Size(30, 13);
+            this.lblHerd.TabIndex = 0;
+            this.lblHerd.Text = "Herd";
             // 
             // label3
             // 
