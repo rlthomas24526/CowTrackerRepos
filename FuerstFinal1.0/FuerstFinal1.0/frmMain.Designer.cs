@@ -67,6 +67,7 @@
             this.btnAddAnimal.TabIndex = 2;
             this.btnAddAnimal.Text = "Add Animal";
             this.btnAddAnimal.UseVisualStyleBackColor = true;
+            this.btnAddAnimal.Click += new System.EventHandler(this.btnAddAnimal_Click);
             // 
             // btnEditAnimal
             // 

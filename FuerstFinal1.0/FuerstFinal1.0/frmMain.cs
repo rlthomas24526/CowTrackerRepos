@@ -21,5 +21,13 @@ namespace FuerstFinal1._0
         {
             Application.Exit();
         }
+
+        private void btnAddAnimal_Click(object sender, EventArgs e)
+        {
+            Form AddAnimal = new frmAddAnimal();
+            AddAnimal.Owner = this;
+            AddAnimal.Show();
+            this.Hide();
+        }
     }
 }
