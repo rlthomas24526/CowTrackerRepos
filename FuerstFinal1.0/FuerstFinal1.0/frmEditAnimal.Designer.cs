@@ -139,6 +139,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmEditAnimal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditAnimal";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -126,6 +126,7 @@
             this.Controls.Add(this.lblParent);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmAddRelationship";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddRelationship";
             this.ResumeLayout(false);
             this.PerformLayout();

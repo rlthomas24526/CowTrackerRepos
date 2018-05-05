@@ -195,6 +195,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearch";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
