@@ -19,7 +19,9 @@ namespace FuerstFinal1._0
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
 
-            //Default mom/dad cow
+            //LOAD THE FILES
+            List<CowClass> CowList = new List<CowClass>();
+            CowList = CowClass.RetrieveCowInfo();
 
         }
     }

@@ -86,6 +86,7 @@
             this.lstCowList.Name = "lstCowList";
             this.lstCowList.Size = new System.Drawing.Size(277, 69);
             this.lstCowList.TabIndex = 41;
+            this.lstCowList.SelectedIndexChanged += new System.EventHandler(this.lstCowList_SelectedIndexChanged);
             // 
             // lblID
             // 
@@ -102,6 +103,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(209, 20);
             this.textBox1.TabIndex = 43;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnViewCow
             // 
@@ -130,6 +132,7 @@
             this.Name = "frmSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearch";
+            this.Load += new System.EventHandler(this.frmSearch_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

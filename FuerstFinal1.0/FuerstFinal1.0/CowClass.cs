@@ -7,7 +7,7 @@ using System.IO;
 
 namespace FuerstFinal1._0
 {
-    class CowClass
+    public class CowClass
     {
         public int ID;
         public char gender;
@@ -37,7 +37,7 @@ namespace FuerstFinal1._0
         }
 
         //Creates a list of all the cows in the save file
-        public List<CowClass> RetrieveCowInfo()
+        public static List<CowClass> RetrieveCowInfo()
         {
             //INPUT AND OUTPUT FILE
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
@@ -70,7 +70,7 @@ namespace FuerstFinal1._0
         }
 
         //Adds a cow to the end of the list of cows
-        public List<CowClass> AddCow(List<CowClass> oldCows, CowClass addThisCow)
+        public static List<CowClass> AddCow(List<CowClass> oldCows, CowClass addThisCow)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
 
@@ -99,7 +99,7 @@ namespace FuerstFinal1._0
         }
 
         //Deletes a cow from the list of cows
-        public List<CowClass> DeleteCow(List<CowClass> oldCows, int indexToDelete)
+        public static List<CowClass> DeleteCow(List<CowClass> oldCows, int indexToDelete)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
 
@@ -128,9 +128,9 @@ namespace FuerstFinal1._0
         }
 
         //Searches for a particular cow
-        public int SearchForCow(List<CowClass> oldCows, int searchForThisID)
+        public static int SearchForCow(List<CowClass> oldCows, int searchForThisID)
         {
-            int returnthisnumber = 0;
+            int returnthisnumber = 666;
 
             for (var i = 0; i < oldCows.Count; i++)
             {
