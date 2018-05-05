@@ -28,7 +28,12 @@ namespace FuerstFinal1._0
 
         public CowClass(int theID, char theGender, char theHerd, DateTime theBirthday, int theBirthweight, string theNotes)
         {
-
+            this.ID = theID;
+            this.gender = theGender;
+            this.herd = theHerd;
+            this.birthday = theBirthday;
+            this.birthweight = theBirthweight;
+            this.notes = theNotes;
         }
 
         //Creates a list of all the cows in the save file
