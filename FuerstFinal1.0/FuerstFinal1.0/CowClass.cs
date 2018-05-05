@@ -122,5 +122,22 @@ namespace FuerstFinal1._0
             return oldCows;
         }
 
+        //Searches for a particular cow
+        public int SearchForCow(List<CowClass> oldCows, int searchForThisID)
+        {
+            int returnthisnumber = 0;
+
+            for (var i = 0; i < oldCows.Count; i++)
+            {
+                CowClass currentCow = oldCows[i];
+
+                if (currentCow.ID == searchForThisID)
+                {
+                    returnthisnumber = currentCow.ID;
+                }
+            }
+
+            return returnthisnumber;
+        }
     }
 }
