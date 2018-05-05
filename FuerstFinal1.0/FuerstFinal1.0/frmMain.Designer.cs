@@ -32,7 +32,6 @@
             this.lblWhatToDo = new System.Windows.Forms.Label();
             this.btnAddAnimal = new System.Windows.Forms.Button();
             this.btnEditAnimal = new System.Windows.Forms.Button();
-            this.btnViewAnimal = new System.Windows.Forms.Button();
             this.btnAddRelationship = new System.Windows.Forms.Button();
             this.btnCheckRelationship = new System.Windows.Forms.Button();
             this.btnCreateBackup = new System.Windows.Forms.Button();
@@ -67,42 +66,37 @@
             this.btnAddAnimal.TabIndex = 2;
             this.btnAddAnimal.Text = "Add Animal";
             this.btnAddAnimal.UseVisualStyleBackColor = true;
+            this.btnAddAnimal.Click += new System.EventHandler(this.btnAddAnimal_Click);
             // 
             // btnEditAnimal
             // 
             this.btnEditAnimal.Location = new System.Drawing.Point(33, 197);
             this.btnEditAnimal.Name = "btnEditAnimal";
-            this.btnEditAnimal.Size = new System.Drawing.Size(75, 23);
+            this.btnEditAnimal.Size = new System.Drawing.Size(98, 23);
             this.btnEditAnimal.TabIndex = 3;
-            this.btnEditAnimal.Text = "Edit Animal";
+            this.btnEditAnimal.Text = "View/Edit Animal";
             this.btnEditAnimal.UseVisualStyleBackColor = true;
-            // 
-            // btnViewAnimal
-            // 
-            this.btnViewAnimal.Location = new System.Drawing.Point(33, 254);
-            this.btnViewAnimal.Name = "btnViewAnimal";
-            this.btnViewAnimal.Size = new System.Drawing.Size(75, 23);
-            this.btnViewAnimal.TabIndex = 4;
-            this.btnViewAnimal.Text = "View Animal";
-            this.btnViewAnimal.UseVisualStyleBackColor = true;
+            this.btnEditAnimal.Click += new System.EventHandler(this.btnEditAnimal_Click);
             // 
             // btnAddRelationship
             // 
-            this.btnAddRelationship.Location = new System.Drawing.Point(33, 313);
+            this.btnAddRelationship.Location = new System.Drawing.Point(33, 276);
             this.btnAddRelationship.Name = "btnAddRelationship";
             this.btnAddRelationship.Size = new System.Drawing.Size(98, 23);
             this.btnAddRelationship.TabIndex = 5;
             this.btnAddRelationship.Text = "Add Relationship";
             this.btnAddRelationship.UseVisualStyleBackColor = true;
+            this.btnAddRelationship.Click += new System.EventHandler(this.btnAddRelationship_Click);
             // 
             // btnCheckRelationship
             // 
-            this.btnCheckRelationship.Location = new System.Drawing.Point(33, 368);
+            this.btnCheckRelationship.Location = new System.Drawing.Point(32, 349);
             this.btnCheckRelationship.Name = "btnCheckRelationship";
             this.btnCheckRelationship.Size = new System.Drawing.Size(127, 23);
             this.btnCheckRelationship.TabIndex = 6;
             this.btnCheckRelationship.Text = "Check Relationship";
             this.btnCheckRelationship.UseVisualStyleBackColor = true;
+            this.btnCheckRelationship.Click += new System.EventHandler(this.btnCheckRelationship_Click);
             // 
             // btnCreateBackup
             // 
@@ -112,6 +106,7 @@
             this.btnCreateBackup.TabIndex = 7;
             this.btnCreateBackup.Text = "Create Backup";
             this.btnCreateBackup.UseVisualStyleBackColor = true;
+            this.btnCreateBackup.Click += new System.EventHandler(this.btnCreateBackup_Click);
             // 
             // btnExit
             // 
@@ -132,7 +127,6 @@
             this.Controls.Add(this.btnCreateBackup);
             this.Controls.Add(this.btnCheckRelationship);
             this.Controls.Add(this.btnAddRelationship);
-            this.Controls.Add(this.btnViewAnimal);
             this.Controls.Add(this.btnEditAnimal);
             this.Controls.Add(this.btnAddAnimal);
             this.Controls.Add(this.lblWhatToDo);
@@ -150,7 +144,6 @@
         private System.Windows.Forms.Label lblWhatToDo;
         private System.Windows.Forms.Button btnAddAnimal;
         private System.Windows.Forms.Button btnEditAnimal;
-        private System.Windows.Forms.Button btnViewAnimal;
         private System.Windows.Forms.Button btnAddRelationship;
         private System.Windows.Forms.Button btnCheckRelationship;
         private System.Windows.Forms.Button btnCreateBackup;

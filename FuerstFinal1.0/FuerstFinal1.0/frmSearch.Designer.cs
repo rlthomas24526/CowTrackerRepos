@@ -41,6 +41,7 @@
             this.radFemale = new System.Windows.Forms.RadioButton();
             this.lblBirthYear = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnViewCow = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             this.btnExit.TabIndex = 36;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnBack
             // 
@@ -71,15 +73,17 @@
             this.btnBack.TabIndex = 39;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnEditThisCow
             // 
-            this.btnEditThisCow.Location = new System.Drawing.Point(288, 365);
+            this.btnEditThisCow.Location = new System.Drawing.Point(365, 365);
             this.btnEditThisCow.Name = "btnEditThisCow";
             this.btnEditThisCow.Size = new System.Drawing.Size(141, 23);
             this.btnEditThisCow.TabIndex = 40;
             this.btnEditThisCow.Text = "Edit This Cow";
             this.btnEditThisCow.UseVisualStyleBackColor = true;
+            this.btnEditThisCow.Click += new System.EventHandler(this.btnEditThisCow_Click);
             // 
             // lstCowList
             // 
@@ -164,11 +168,22 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 47;
             // 
+            // btnViewCow
+            // 
+            this.btnViewCow.Location = new System.Drawing.Point(199, 365);
+            this.btnViewCow.Name = "btnViewCow";
+            this.btnViewCow.Size = new System.Drawing.Size(120, 23);
+            this.btnViewCow.TabIndex = 48;
+            this.btnViewCow.Text = "View This Cow";
+            this.btnViewCow.UseVisualStyleBackColor = true;
+            this.btnViewCow.Click += new System.EventHandler(this.btnViewCow_Click);
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 400);
+            this.Controls.Add(this.btnViewCow);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblBirthYear);
             this.Controls.Add(this.groupBox1);
@@ -203,5 +218,6 @@
         private System.Windows.Forms.RadioButton radFemale;
         private System.Windows.Forms.Label lblBirthYear;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnViewCow;
     }
 }

@@ -90,6 +90,7 @@
             this.btnExit.TabIndex = 35;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -99,6 +100,7 @@
             this.btnSave.TabIndex = 36;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnBack
             // 
@@ -108,6 +110,7 @@
             this.btnBack.TabIndex = 37;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmAddRelationship
             // 

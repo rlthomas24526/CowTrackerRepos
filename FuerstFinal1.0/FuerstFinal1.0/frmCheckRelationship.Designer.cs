@@ -58,6 +58,7 @@
             this.btnExit.TabIndex = 35;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnCheck
             // 
@@ -67,6 +68,7 @@
             this.btnCheck.TabIndex = 36;
             this.btnCheck.Text = "Check Relationship";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // btnBack
             // 
@@ -76,6 +78,7 @@
             this.btnBack.TabIndex = 38;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblCow1
             // 
