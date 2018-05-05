@@ -247,7 +247,9 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmViewAnimal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmViewAnimal";
+            this.Load += new System.EventHandler(this.frmViewAnimal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

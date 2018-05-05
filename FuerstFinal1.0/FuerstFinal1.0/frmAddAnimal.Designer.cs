@@ -286,6 +286,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmAddAnimal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddAnimal";
             this.grpGender.ResumeLayout(false);
             this.grpGender.PerformLayout();

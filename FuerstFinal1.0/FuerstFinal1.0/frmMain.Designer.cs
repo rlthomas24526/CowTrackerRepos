@@ -132,6 +132,7 @@
             this.Controls.Add(this.lblWhatToDo);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

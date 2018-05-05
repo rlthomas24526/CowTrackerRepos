@@ -148,6 +148,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmCheckRelationship";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCheckRelationship";
             this.ResumeLayout(false);
             this.PerformLayout();

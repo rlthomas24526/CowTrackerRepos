@@ -27,5 +27,10 @@ namespace FuerstFinal1._0
             this.Owner.Show();
             this.Close();
         }
+
+        private void frmViewAnimal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
