@@ -26,18 +26,13 @@ namespace FuerstFinal1._0
 
         }
 
-        public CowClass(int theID, char theGender, char theHerd)
-        {
-
-        }
-
         public CowClass(int theID, char theGender, char theHerd, DateTime theBirthday, int theBirthweight, string theNotes)
         {
 
         }
 
         //Creates a list of all the cows in the save file
-        public List<CowClass> retrieveCowInfo()
+        public List<CowClass> RetrieveCowInfo()
         {
             //INPUT AND OUTPUT FILE
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
@@ -45,10 +40,11 @@ namespace FuerstFinal1._0
             List<CowClass> Cows = new List<CowClass>();
             using (StreamReader sr = new StreamReader(path))
             {
+                string str;
+                string[] strArray;
+
                 while (sr.Peek() >= 0)
                 {
-                    string str;
-                    string[] strArray;
                     str = sr.ReadLine();
 
                     strArray = str.Split(',');
@@ -67,5 +63,64 @@ namespace FuerstFinal1._0
 
             return Cows;
         }
+
+        //Adds a cow to the end of the list of cows
+        public List<CowClass> AddCow(List<CowClass> oldCows, CowClass addThisCow)
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
+
+            oldCows.Add(addThisCow);
+
+            //Overwrite with first one
+            using (StreamWriter sr = new StreamWriter(path, false))
+            {
+                sr.WriteLine(oldCows[0].ID.ToString() + "," + oldCows[0].gender.ToString() + "," + oldCows[0].herd + "," +
+                    oldCows[0].birthday.Year.ToString() + "," + oldCows[0].birthday.Month.ToString() + "," + oldCows[0].birthday.Day.ToString() +
+                    "," + oldCows[0].birthweight.ToString() + oldCows[0].notes);
+            }
+
+            //Append with the rest - IN REAL PROJ TEST THAT THERE IS MORE THAN ONE ITEM IN LIST FIRST THEN DO THIS probably so no breaky
+            for (var i = 1; i < oldCows.Count; i++)
+            {
+                using (StreamWriter sr = new StreamWriter(path, true))
+                {
+                    sr.WriteLine(oldCows[i].ID.ToString() + "," + oldCows[i].gender.ToString() + "," + oldCows[i].herd + "," +
+                    oldCows[i].birthday.Year.ToString() + "," + oldCows[i].birthday.Month.ToString() + "," + oldCows[i].birthday.Day.ToString() +
+                    "," + oldCows[i].birthweight.ToString() + oldCows[i].notes);
+                }
+            }
+
+            return oldCows;
+        }
+
+        //Deletes a cow from the list of cows
+        public List<CowClass> DeleteCow(List<CowClass> oldCows, int indexToDelete)
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
+
+            oldCows.RemoveAt(indexToDelete);
+
+            //Overwrite with first one
+            using (StreamWriter sr = new StreamWriter(path, false))
+            {
+                sr.WriteLine(oldCows[0].ID.ToString() + "," + oldCows[0].gender.ToString() + "," + oldCows[0].herd + "," +
+                    oldCows[0].birthday.Year.ToString() + "," + oldCows[0].birthday.Month.ToString() + "," + oldCows[0].birthday.Day.ToString() +
+                    "," + oldCows[0].birthweight.ToString() + oldCows[0].notes);
+            }
+
+            //Append with the rest - IN REAL PROG TEST THAT THERE IS MORE THAN ONE ITEM IN LIST FIRST THEN DO THIS
+            for (var i = 1; i < oldCows.Count; i++)
+            {
+                using (StreamWriter sr = new StreamWriter(path, true))
+                {
+                    sr.WriteLine(oldCows[i].ID.ToString() + "," + oldCows[i].gender.ToString() + "," + oldCows[i].herd + "," +
+                    oldCows[i].birthday.Year.ToString() + "," + oldCows[i].birthday.Month.ToString() + "," + oldCows[i].birthday.Day.ToString() +
+                    "," + oldCows[i].birthweight.ToString() + oldCows[i].notes);
+                }
+            }
+
+            return oldCows;
+        }
+
     }
 }
