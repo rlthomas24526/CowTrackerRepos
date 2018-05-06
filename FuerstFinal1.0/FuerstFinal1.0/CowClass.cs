@@ -42,6 +42,14 @@ namespace FuerstFinal1._0
             //INPUT AND OUTPUT FILE
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWS.txt");
 
+            //If the path doesn't exist
+            if(!File.Exists(path))
+            {
+                string randomText = "COWS";
+                string newpath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                File.WriteAllText(newpath, randomText);
+            }
+
             List<CowClass> Cows = new List<CowClass>();
             using (StreamReader sr = new StreamReader(path))
             {

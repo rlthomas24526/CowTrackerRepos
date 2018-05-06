@@ -267,6 +267,7 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(100, 20);
             this.txtDate.TabIndex = 34;
+            this.txtDate.Text = "1/1/1900";
             this.txtDate.Visible = false;
             // 
             // frmAddAnimal
