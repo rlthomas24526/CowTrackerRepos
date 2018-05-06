@@ -24,7 +24,7 @@ namespace FuerstFinal1._0
         }
 
         //Creates a list of all the relationships in the save file
-        public List<RelationClass> RetrieveRelationInfo()
+        public static List<RelationClass> RetrieveRelationInfo()
         {
             //INPUT AND OUTPUT FILE
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "RELATIONTEST1.txt");
@@ -53,7 +53,7 @@ namespace FuerstFinal1._0
         }
 
         //Adds a new relationship to the save file
-        public List<RelationClass> AddRelation(List<RelationClass> oldRelations, RelationClass addThisRelation)
+        public static void AddRelation(List<RelationClass> oldRelations, RelationClass addThisRelation)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "RELATIONTEST1.txt");
 
@@ -73,12 +73,10 @@ namespace FuerstFinal1._0
                     sr.WriteLine(oldRelations[i].parentCow.ToString() + "," + oldRelations[i].kiddyCow.ToString());
                 }
             }
-
-            return oldRelations;
         }
 
         //Searches for a relationship
-        public bool SearchForCow(List<RelationClass> oldRelations, int parentID, int kiddyID)
+        public static bool SearchForCow(List<RelationClass> oldRelations, int parentID, int kiddyID)
         {
             int parentCowIndex;
 
