@@ -40,7 +40,7 @@ namespace FuerstFinal1._0
         public static List<CowClass> RetrieveCowInfo()
         {
             //INPUT AND OUTPUT FILE
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWS.txt");
 
             List<CowClass> Cows = new List<CowClass>();
             using (StreamReader sr = new StreamReader(path))

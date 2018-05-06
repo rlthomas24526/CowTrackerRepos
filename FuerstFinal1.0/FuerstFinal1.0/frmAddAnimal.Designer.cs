@@ -42,14 +42,14 @@
             this.radNotMine = new System.Windows.Forms.RadioButton();
             this.radMine = new System.Windows.Forms.RadioButton();
             this.lblHerd = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblBirthdate = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.lblBirthWeight = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBirthWeight = new System.Windows.Forms.TextBox();
             this.lblNotes = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.grpGender.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(331, 601);
+            this.btnExit.Location = new System.Drawing.Point(331, 589);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 9;
@@ -76,7 +76,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 601);
+            this.btnBack.Location = new System.Drawing.Point(12, 589);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 19;
@@ -108,6 +108,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 22;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // grpGender
             // 
@@ -197,19 +198,10 @@
             this.lblHerd.TabIndex = 0;
             this.lblHerd.Text = "Herd";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 260);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "OPTIONAL INFO";
-            // 
             // lblBirthdate
             // 
             this.lblBirthdate.AutoSize = true;
-            this.lblBirthdate.Location = new System.Drawing.Point(15, 292);
+            this.lblBirthdate.Location = new System.Drawing.Point(18, 266);
             this.lblBirthdate.Name = "lblBirthdate";
             this.lblBirthdate.Size = new System.Drawing.Size(49, 13);
             this.lblBirthdate.TabIndex = 26;
@@ -217,46 +209,43 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(91, 292);
+            this.monthCalendar1.Location = new System.Drawing.Point(91, 266);
+            this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2018, 5, 5, 0, 0, 0, 0), new System.DateTime(2018, 5, 11, 0, 0, 0, 0));
             this.monthCalendar1.TabIndex = 27;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // lblBirthWeight
             // 
             this.lblBirthWeight.AutoSize = true;
-            this.lblBirthWeight.Location = new System.Drawing.Point(15, 482);
+            this.lblBirthWeight.Location = new System.Drawing.Point(18, 488);
             this.lblBirthWeight.Name = "lblBirthWeight";
             this.lblBirthWeight.Size = new System.Drawing.Size(65, 13);
             this.lblBirthWeight.TabIndex = 28;
             this.lblBirthWeight.Text = "Birth Weight";
             // 
-            // textBox1
+            // txtBirthWeight
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 479);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 29;
+            this.txtBirthWeight.Location = new System.Drawing.Point(102, 485);
+            this.txtBirthWeight.Name = "txtBirthWeight";
+            this.txtBirthWeight.Size = new System.Drawing.Size(100, 20);
+            this.txtBirthWeight.TabIndex = 29;
+            this.txtBirthWeight.Text = "0";
             // 
             // lblNotes
             // 
             this.lblNotes.AutoSize = true;
-            this.lblNotes.Location = new System.Drawing.Point(18, 524);
+            this.lblNotes.Location = new System.Drawing.Point(18, 530);
             this.lblNotes.Name = "lblNotes";
             this.lblNotes.Size = new System.Drawing.Size(35, 13);
             this.lblNotes.TabIndex = 30;
             this.lblNotes.Text = "Notes";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(82, 524);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(324, 71);
-            this.richTextBox1.TabIndex = 31;
-            this.richTextBox1.Text = "";
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(250, 601);
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(164, 589);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 32;
@@ -264,19 +253,35 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // txtNotes
+            // 
+            this.txtNotes.Location = new System.Drawing.Point(79, 530);
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(327, 20);
+            this.txtNotes.TabIndex = 33;
+            this.txtNotes.Text = "N/A";
+            // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(139, 440);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(100, 20);
+            this.txtDate.TabIndex = 34;
+            this.txtDate.Visible = false;
+            // 
             // frmAddAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 636);
+            this.ClientSize = new System.Drawing.Size(428, 624);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.lblNotes);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBirthWeight);
             this.Controls.Add(this.lblBirthWeight);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.lblBirthdate);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpGender);
             this.Controls.Add(this.txtID);
@@ -313,13 +318,13 @@
         private System.Windows.Forms.RadioButton radNotMine;
         private System.Windows.Forms.RadioButton radMine;
         private System.Windows.Forms.Label lblHerd;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblBirthdate;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label lblBirthWeight;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBirthWeight;
         private System.Windows.Forms.Label lblNotes;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox txtNotes;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }
