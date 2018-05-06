@@ -63,7 +63,7 @@ namespace FuerstFinal1._0
                 if (currentCow.ID == COWID)
                 {
                     indexToChange = i;
-                    CowList[i].notes = tbNotes.Text;
+                    CowList[i].notes = "," + tbNotes.Text;
                 }
             }
 

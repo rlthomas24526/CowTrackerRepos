@@ -49,13 +49,13 @@ namespace FuerstFinal1._0
 
             if(canTheyBreed == false)
             {
-                lblSafe.Visible = false;
-                lblNotSafe.Visible = true;
+                lblSafe.Visible = true;
+                lblNotSafe.Visible = false;
             }
             else
             {
-                lblSafe.Visible = true;
-                lblNotSafe.Visible = false;
+                lblSafe.Visible = false;
+                lblNotSafe.Visible = true;
             }
         }
 

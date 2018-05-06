@@ -81,7 +81,7 @@ namespace FuerstFinal1._0
             {
                 sr.WriteLine(oldCows[0].ID.ToString() + "," + oldCows[0].gender.ToString() + "," + oldCows[0].herd + "," +
                     oldCows[0].birthday.Year.ToString() + "," + oldCows[0].birthday.Month.ToString() + "," + oldCows[0].birthday.Day.ToString() +
-                    "," + oldCows[0].birthweight.ToString() + oldCows[0].notes);
+                    "," + oldCows[0].birthweight.ToString() + "," + oldCows[0].notes);
             }
 
             //Append with the rest - IN REAL PROJ TEST THAT THERE IS MORE THAN ONE ITEM IN LIST FIRST THEN DO THIS probably so no breaky
@@ -91,7 +91,7 @@ namespace FuerstFinal1._0
                 {
                     sr.WriteLine(oldCows[i].ID.ToString() + "," + oldCows[i].gender.ToString() + "," + oldCows[i].herd + "," +
                     oldCows[i].birthday.Year.ToString() + "," + oldCows[i].birthday.Month.ToString() + "," + oldCows[i].birthday.Day.ToString() +
-                    "," + oldCows[i].birthweight.ToString() + oldCows[i].notes);
+                    "," + oldCows[i].birthweight.ToString() + "," + oldCows[i].notes);
                 }
             }
 
@@ -108,7 +108,7 @@ namespace FuerstFinal1._0
             {
                 sr.WriteLine(oldCows[0].ID.ToString() + "," + oldCows[0].gender.ToString() + "," + oldCows[0].herd + "," +
                     oldCows[0].birthday.Year.ToString() + "," + oldCows[0].birthday.Month.ToString() + "," + oldCows[0].birthday.Day.ToString() +
-                    "," + oldCows[0].birthweight.ToString() + oldCows[0].notes);
+                    "," + oldCows[0].birthweight.ToString() + "," + oldCows[0].notes);
             }
 
             //Append with the rest - IN REAL PROJ TEST THAT THERE IS MORE THAN ONE ITEM IN LIST FIRST THEN DO THIS probably so no breaky
@@ -118,7 +118,7 @@ namespace FuerstFinal1._0
                 {
                     sr.WriteLine(oldCows[i].ID.ToString() + "," + oldCows[i].gender.ToString() + "," + oldCows[i].herd + "," +
                     oldCows[i].birthday.Year.ToString() + "," + oldCows[i].birthday.Month.ToString() + "," + oldCows[i].birthday.Day.ToString() +
-                    "," + oldCows[i].birthweight.ToString() + oldCows[i].notes);
+                    "," + oldCows[i].birthweight.ToString() + "," + oldCows[i].notes);
                 }
             }
         }
@@ -148,7 +148,7 @@ namespace FuerstFinal1._0
             {
                 sr.WriteLine(oldCows[0].ID.ToString() + "," + oldCows[0].gender.ToString() + "," + oldCows[0].herd + "," +
                     oldCows[0].birthday.Year.ToString() + "," + oldCows[0].birthday.Month.ToString() + "," + oldCows[0].birthday.Day.ToString() +
-                    "," + oldCows[0].birthweight.ToString() + oldCows[0].notes);
+                    "," + oldCows[0].birthweight.ToString() + "," + oldCows[0].notes);
             }
 
             //Append with the rest - IN REAL PROG TEST THAT THERE IS MORE THAN ONE ITEM IN LIST FIRST THEN DO THIS
@@ -158,7 +158,7 @@ namespace FuerstFinal1._0
                 {
                     sr.WriteLine(oldCows[i].ID.ToString() + "," + oldCows[i].gender.ToString() + "," + oldCows[i].herd + "," +
                     oldCows[i].birthday.Year.ToString() + "," + oldCows[i].birthday.Month.ToString() + "," + oldCows[i].birthday.Day.ToString() +
-                    "," + oldCows[i].birthweight.ToString() + oldCows[i].notes);
+                    "," + oldCows[i].birthweight.ToString() + "," oldCows[i].notes);
                 }
             }
 
