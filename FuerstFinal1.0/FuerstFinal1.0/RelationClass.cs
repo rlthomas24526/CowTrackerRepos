@@ -76,7 +76,7 @@ namespace FuerstFinal1._0
         }
 
         //Searches for a relationship
-        public static bool SearchForCow(List<RelationClass> oldRelations, int parentID, int kiddyID)
+        public static bool SearchForRelation(List<RelationClass> oldRelations, int cow1ID, int cow2ID)
         {
             int parentCowIndex;
 
@@ -84,10 +84,10 @@ namespace FuerstFinal1._0
             {
                 RelationClass currentRelation = oldRelations[i];
 
-                if (currentRelation.parentCow == parentID)
+                if (currentRelation.parentCow == cow1ID)
                 {
                     parentCowIndex = i;
-                    if(oldRelations[i].kiddyCow == kiddyID)
+                    if(oldRelations[i].kiddyCow == cow2ID)
                     {
                         return true;
                     }

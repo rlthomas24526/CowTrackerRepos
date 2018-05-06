@@ -33,18 +33,18 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblCow1 = new System.Windows.Forms.Label();
-            this.cbCow1 = new System.Windows.Forms.ComboBox();
             this.lblCow2 = new System.Windows.Forms.Label();
-            this.cbCow2 = new System.Windows.Forms.ComboBox();
             this.lblSafe = new System.Windows.Forms.Label();
             this.lblNotSafe = new System.Windows.Forms.Label();
+            this.lstCow1 = new System.Windows.Forms.ListBox();
+            this.lstCow2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(108, 9);
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(263, 41);
             this.lblTitle.TabIndex = 3;
@@ -52,7 +52,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(422, 422);
+            this.btnExit.Location = new System.Drawing.Point(233, 422);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 35;
@@ -62,7 +62,7 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(189, 422);
+            this.btnCheck.Location = new System.Drawing.Point(95, 422);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(132, 23);
             this.btnCheck.TabIndex = 36;
@@ -89,59 +89,63 @@
             this.lblCow1.TabIndex = 39;
             this.lblCow1.Text = "Cow 1";
             // 
-            // cbCow1
-            // 
-            this.cbCow1.FormattingEnabled = true;
-            this.cbCow1.Location = new System.Drawing.Point(105, 88);
-            this.cbCow1.Name = "cbCow1";
-            this.cbCow1.Size = new System.Drawing.Size(198, 21);
-            this.cbCow1.TabIndex = 40;
-            // 
             // lblCow2
             // 
             this.lblCow2.AutoSize = true;
-            this.lblCow2.Location = new System.Drawing.Point(32, 159);
+            this.lblCow2.Location = new System.Drawing.Point(29, 223);
             this.lblCow2.Name = "lblCow2";
             this.lblCow2.Size = new System.Drawing.Size(37, 13);
             this.lblCow2.TabIndex = 41;
             this.lblCow2.Text = "Cow 2";
             // 
-            // cbCow2
-            // 
-            this.cbCow2.FormattingEnabled = true;
-            this.cbCow2.Location = new System.Drawing.Point(105, 150);
-            this.cbCow2.Name = "cbCow2";
-            this.cbCow2.Size = new System.Drawing.Size(198, 21);
-            this.cbCow2.TabIndex = 42;
-            // 
             // lblSafe
             // 
             this.lblSafe.AutoSize = true;
-            this.lblSafe.Location = new System.Drawing.Point(202, 247);
+            this.lblSafe.Location = new System.Drawing.Point(112, 332);
             this.lblSafe.Name = "lblSafe";
             this.lblSafe.Size = new System.Drawing.Size(92, 13);
             this.lblSafe.TabIndex = 43;
             this.lblSafe.Text = "SAFE TO BREED";
+            this.lblSafe.Visible = false;
             // 
             // lblNotSafe
             // 
             this.lblNotSafe.AutoSize = true;
-            this.lblNotSafe.Location = new System.Drawing.Point(203, 306);
+            this.lblNotSafe.Location = new System.Drawing.Point(97, 366);
             this.lblNotSafe.Name = "lblNotSafe";
             this.lblNotSafe.Size = new System.Drawing.Size(118, 13);
             this.lblNotSafe.TabIndex = 44;
             this.lblNotSafe.Text = "NOT SAFE TO BREED";
+            this.lblNotSafe.Visible = false;
+            // 
+            // lstCow1
+            // 
+            this.lstCow1.FormattingEnabled = true;
+            this.lstCow1.Location = new System.Drawing.Point(95, 97);
+            this.lstCow1.Name = "lstCow1";
+            this.lstCow1.Size = new System.Drawing.Size(120, 95);
+            this.lstCow1.TabIndex = 45;
+            this.lstCow1.SelectedIndexChanged += new System.EventHandler(this.lstCow1_SelectedIndexChanged);
+            // 
+            // lstCow2
+            // 
+            this.lstCow2.FormattingEnabled = true;
+            this.lstCow2.Location = new System.Drawing.Point(95, 223);
+            this.lstCow2.Name = "lstCow2";
+            this.lstCow2.Size = new System.Drawing.Size(120, 95);
+            this.lstCow2.TabIndex = 46;
+            this.lstCow2.SelectedIndexChanged += new System.EventHandler(this.lstCow2_SelectedIndexChanged);
             // 
             // frmCheckRelationship
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 457);
+            this.ClientSize = new System.Drawing.Size(329, 457);
+            this.Controls.Add(this.lstCow2);
+            this.Controls.Add(this.lstCow1);
             this.Controls.Add(this.lblNotSafe);
             this.Controls.Add(this.lblSafe);
-            this.Controls.Add(this.cbCow2);
             this.Controls.Add(this.lblCow2);
-            this.Controls.Add(this.cbCow1);
             this.Controls.Add(this.lblCow1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCheck);
@@ -150,6 +154,7 @@
             this.Name = "frmCheckRelationship";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCheckRelationship";
+            this.Load += new System.EventHandler(this.frmCheckRelationship_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,10 +167,10 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCow1;
-        private System.Windows.Forms.ComboBox cbCow1;
         private System.Windows.Forms.Label lblCow2;
-        private System.Windows.Forms.ComboBox cbCow2;
         private System.Windows.Forms.Label lblSafe;
         private System.Windows.Forms.Label lblNotSafe;
+        private System.Windows.Forms.ListBox lstCow1;
+        private System.Windows.Forms.ListBox lstCow2;
     }
 }

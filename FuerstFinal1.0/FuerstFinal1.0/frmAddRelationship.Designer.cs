@@ -42,7 +42,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(122, 9);
+            this.lblTitle.Location = new System.Drawing.Point(24, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(263, 41);
             this.lblTitle.TabIndex = 3;
@@ -68,7 +68,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(415, 419);
+            this.btnExit.Location = new System.Drawing.Point(212, 419);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 35;
@@ -79,7 +79,7 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(334, 419);
+            this.btnSave.Location = new System.Drawing.Point(114, 419);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 36;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 454);
+            this.ClientSize = new System.Drawing.Size(330, 454);
             this.Controls.Add(this.lstChild);
             this.Controls.Add(this.lstParent);
             this.Controls.Add(this.btnBack);
