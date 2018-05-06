@@ -158,7 +158,7 @@ namespace FuerstFinal1._0
                 {
                     sr.WriteLine(oldCows[i].ID.ToString() + "," + oldCows[i].gender.ToString() + "," + oldCows[i].herd + "," +
                     oldCows[i].birthday.Year.ToString() + "," + oldCows[i].birthday.Month.ToString() + "," + oldCows[i].birthday.Day.ToString() +
-                    "," + oldCows[i].birthweight.ToString() + "," oldCows[i].notes);
+                    "," + oldCows[i].birthweight.ToString() + "," + oldCows[i].notes);
                 }
             }
 
