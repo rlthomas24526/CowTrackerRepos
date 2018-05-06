@@ -27,7 +27,15 @@ namespace FuerstFinal1._0
         public static List<RelationClass> RetrieveRelationInfo()
         {
             //INPUT AND OUTPUT FILE
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "RELATIONTEST1.txt");
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "RELATIONS.txt");
+
+            //If the path doesn't exist
+            if (!File.Exists(path))
+            {
+                string randomText = "RELATIONS";
+                string newpath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                File.WriteAllText(newpath, randomText);
+            }
 
             List<RelationClass> Relations = new List<RelationClass>();
             using (StreamReader sr = new StreamReader(path))
@@ -56,6 +64,14 @@ namespace FuerstFinal1._0
         public static void AddRelation(List<RelationClass> oldRelations, RelationClass addThisRelation)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "RELATIONTEST1.txt");
+
+            //If the path doesn't exist
+            if (!File.Exists(path))
+            {
+                string randomText = "RELATIONS";
+                string newpath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                File.WriteAllText(newpath, randomText);
+            }
 
             oldRelations.Add(addThisRelation);
 

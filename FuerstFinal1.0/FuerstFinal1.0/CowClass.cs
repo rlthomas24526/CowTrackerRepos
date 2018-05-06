@@ -82,6 +82,14 @@ namespace FuerstFinal1._0
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
 
+            //If the path doesn't exist
+            if (!File.Exists(path))
+            {
+                string randomText = "COWS";
+                string newpath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                File.WriteAllText(newpath, randomText);
+            }
+
             oldCows.Add(addThisCow);
 
             //Overwrite with first one
@@ -111,6 +119,14 @@ namespace FuerstFinal1._0
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
 
+            //If the path doesn't exist
+            if (!File.Exists(path))
+            {
+                string randomText = "COWS";
+                string newpath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                File.WriteAllText(newpath, randomText);
+            }
+
             //Overwrite with first one
             using (StreamWriter sr = new StreamWriter(path, false))
             {
@@ -135,6 +151,14 @@ namespace FuerstFinal1._0
         public static List<CowClass> DeleteCow(List<CowClass> oldCows, int cowIDToDelete)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
+
+            //If the path doesn't exist
+            if (!File.Exists(path))
+            {
+                string randomText = "COWS";
+                string newpath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                File.WriteAllText(newpath, randomText);
+            }
 
             //Find the index of the cow that needs deleted
             int indexToDelete = 99;

@@ -34,7 +34,6 @@
             this.btnEditAnimal = new System.Windows.Forms.Button();
             this.btnAddRelationship = new System.Windows.Forms.Button();
             this.btnCheckRelationship = new System.Windows.Forms.Button();
-            this.btnCreateBackup = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -98,16 +97,6 @@
             this.btnCheckRelationship.UseVisualStyleBackColor = true;
             this.btnCheckRelationship.Click += new System.EventHandler(this.btnCheckRelationship_Click);
             // 
-            // btnCreateBackup
-            // 
-            this.btnCreateBackup.Location = new System.Drawing.Point(32, 417);
-            this.btnCreateBackup.Name = "btnCreateBackup";
-            this.btnCreateBackup.Size = new System.Drawing.Size(94, 23);
-            this.btnCreateBackup.TabIndex = 7;
-            this.btnCreateBackup.Text = "Create Backup";
-            this.btnCreateBackup.UseVisualStyleBackColor = true;
-            this.btnCreateBackup.Click += new System.EventHandler(this.btnCreateBackup_Click);
-            // 
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(484, 459);
@@ -124,7 +113,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 494);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnCreateBackup);
             this.Controls.Add(this.btnCheckRelationship);
             this.Controls.Add(this.btnAddRelationship);
             this.Controls.Add(this.btnEditAnimal);
@@ -147,7 +135,6 @@
         private System.Windows.Forms.Button btnEditAnimal;
         private System.Windows.Forms.Button btnAddRelationship;
         private System.Windows.Forms.Button btnCheckRelationship;
-        private System.Windows.Forms.Button btnCreateBackup;
         private System.Windows.Forms.Button btnExit;
     }
 }
