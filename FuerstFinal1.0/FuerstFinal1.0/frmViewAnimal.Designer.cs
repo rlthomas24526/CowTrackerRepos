@@ -57,7 +57,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(492, 459);
+            this.btnExit.Location = new System.Drawing.Point(492, 404);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 16;
@@ -67,7 +67,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 459);
+            this.btnBack.Location = new System.Drawing.Point(12, 404);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 18;
@@ -132,7 +132,7 @@
             // lblBirthWeight
             // 
             this.lblBirthWeight.AutoSize = true;
-            this.lblBirthWeight.Location = new System.Drawing.Point(13, 298);
+            this.lblBirthWeight.Location = new System.Drawing.Point(13, 237);
             this.lblBirthWeight.Name = "lblBirthWeight";
             this.lblBirthWeight.Size = new System.Drawing.Size(65, 13);
             this.lblBirthWeight.TabIndex = 31;
@@ -141,7 +141,7 @@
             // lblBirthWeightInfo
             // 
             this.lblBirthWeightInfo.AutoSize = true;
-            this.lblBirthWeightInfo.Location = new System.Drawing.Point(163, 298);
+            this.lblBirthWeightInfo.Location = new System.Drawing.Point(163, 237);
             this.lblBirthWeightInfo.Name = "lblBirthWeightInfo";
             this.lblBirthWeightInfo.Size = new System.Drawing.Size(117, 13);
             this.lblBirthWeightInfo.TabIndex = 32;
@@ -150,7 +150,7 @@
             // lblBirthDate
             // 
             this.lblBirthDate.AutoSize = true;
-            this.lblBirthDate.Location = new System.Drawing.Point(16, 260);
+            this.lblBirthDate.Location = new System.Drawing.Point(13, 203);
             this.lblBirthDate.Name = "lblBirthDate";
             this.lblBirthDate.Size = new System.Drawing.Size(54, 13);
             this.lblBirthDate.TabIndex = 33;
@@ -159,7 +159,7 @@
             // lblBirthDateInfo
             // 
             this.lblBirthDateInfo.AutoSize = true;
-            this.lblBirthDateInfo.Location = new System.Drawing.Point(166, 260);
+            this.lblBirthDateInfo.Location = new System.Drawing.Point(163, 203);
             this.lblBirthDateInfo.Name = "lblBirthDateInfo";
             this.lblBirthDateInfo.Size = new System.Drawing.Size(102, 13);
             this.lblBirthDateInfo.TabIndex = 34;
@@ -168,7 +168,7 @@
             // lblNotes
             // 
             this.lblNotes.AutoSize = true;
-            this.lblNotes.Location = new System.Drawing.Point(16, 333);
+            this.lblNotes.Location = new System.Drawing.Point(13, 275);
             this.lblNotes.Name = "lblNotes";
             this.lblNotes.Size = new System.Drawing.Size(35, 13);
             this.lblNotes.TabIndex = 35;
@@ -176,7 +176,7 @@
             // 
             // rtbNotes
             // 
-            this.rtbNotes.Location = new System.Drawing.Point(146, 330);
+            this.rtbNotes.Location = new System.Drawing.Point(146, 275);
             this.rtbNotes.Name = "rtbNotes";
             this.rtbNotes.Size = new System.Drawing.Size(403, 96);
             this.rtbNotes.TabIndex = 36;
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 494);
+            this.ClientSize = new System.Drawing.Size(579, 436);
             this.Controls.Add(this.rtbNotes);
             this.Controls.Add(this.lblNotes);
             this.Controls.Add(this.lblBirthDateInfo);
