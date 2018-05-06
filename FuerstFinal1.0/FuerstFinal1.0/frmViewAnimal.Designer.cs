@@ -37,10 +37,6 @@
             this.lblGenderInfo = new System.Windows.Forms.Label();
             this.lblHerd = new System.Windows.Forms.Label();
             this.lblHerdInfo = new System.Windows.Forms.Label();
-            this.lblMamaCow = new System.Windows.Forms.Label();
-            this.lblMamaCowInfo = new System.Windows.Forms.Label();
-            this.lblPapaCow = new System.Windows.Forms.Label();
-            this.lblPapaCowInfo = new System.Windows.Forms.Label();
             this.lblBirthWeight = new System.Windows.Forms.Label();
             this.lblBirthWeightInfo = new System.Windows.Forms.Label();
             this.lblBirthDate = new System.Windows.Forms.Label();
@@ -133,42 +129,6 @@
             this.lblHerdInfo.TabIndex = 26;
             this.lblHerdInfo.Text = "**HERDINFOHERE";
             // 
-            // lblMamaCow
-            // 
-            this.lblMamaCow.AutoSize = true;
-            this.lblMamaCow.Location = new System.Drawing.Point(16, 200);
-            this.lblMamaCow.Name = "lblMamaCow";
-            this.lblMamaCow.Size = new System.Drawing.Size(60, 13);
-            this.lblMamaCow.TabIndex = 27;
-            this.lblMamaCow.Text = "Mama Cow";
-            // 
-            // lblMamaCowInfo
-            // 
-            this.lblMamaCowInfo.AutoSize = true;
-            this.lblMamaCowInfo.Location = new System.Drawing.Point(172, 199);
-            this.lblMamaCowInfo.Name = "lblMamaCowInfo";
-            this.lblMamaCowInfo.Size = new System.Drawing.Size(98, 13);
-            this.lblMamaCowInfo.TabIndex = 28;
-            this.lblMamaCowInfo.Text = "**MAMACOWINFO";
-            // 
-            // lblPapaCow
-            // 
-            this.lblPapaCow.AutoSize = true;
-            this.lblPapaCow.Location = new System.Drawing.Point(16, 230);
-            this.lblPapaCow.Name = "lblPapaCow";
-            this.lblPapaCow.Size = new System.Drawing.Size(56, 13);
-            this.lblPapaCow.TabIndex = 29;
-            this.lblPapaCow.Text = "Papa Cow";
-            // 
-            // lblPapaCowInfo
-            // 
-            this.lblPapaCowInfo.AutoSize = true;
-            this.lblPapaCowInfo.Location = new System.Drawing.Point(163, 229);
-            this.lblPapaCowInfo.Name = "lblPapaCowInfo";
-            this.lblPapaCowInfo.Size = new System.Drawing.Size(94, 13);
-            this.lblPapaCowInfo.TabIndex = 30;
-            this.lblPapaCowInfo.Text = "**PAPACOWINFO";
-            // 
             // lblBirthWeight
             // 
             this.lblBirthWeight.AutoSize = true;
@@ -233,10 +193,6 @@
             this.Controls.Add(this.lblBirthDate);
             this.Controls.Add(this.lblBirthWeightInfo);
             this.Controls.Add(this.lblBirthWeight);
-            this.Controls.Add(this.lblPapaCowInfo);
-            this.Controls.Add(this.lblPapaCow);
-            this.Controls.Add(this.lblMamaCowInfo);
-            this.Controls.Add(this.lblMamaCow);
             this.Controls.Add(this.lblHerdInfo);
             this.Controls.Add(this.lblHerd);
             this.Controls.Add(this.lblGenderInfo);
@@ -266,10 +222,6 @@
         private System.Windows.Forms.Label lblGenderInfo;
         private System.Windows.Forms.Label lblHerd;
         private System.Windows.Forms.Label lblHerdInfo;
-        private System.Windows.Forms.Label lblMamaCow;
-        private System.Windows.Forms.Label lblMamaCowInfo;
-        private System.Windows.Forms.Label lblPapaCow;
-        private System.Windows.Forms.Label lblPapaCowInfo;
         private System.Windows.Forms.Label lblBirthWeight;
         private System.Windows.Forms.Label lblBirthWeightInfo;
         private System.Windows.Forms.Label lblBirthDate;

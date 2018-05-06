@@ -44,7 +44,7 @@ namespace FuerstFinal1._0
 
         private void btnViewCow_Click(object sender, EventArgs e)
         {
-            Form ViewAnimal = new frmViewAnimal();
+            Form ViewAnimal = new frmViewAnimal(Convert.ToString(lstCowList.SelectedItem));
             ViewAnimal.Owner = this;
             ViewAnimal.Show();
             this.Hide();

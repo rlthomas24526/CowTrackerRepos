@@ -98,10 +98,48 @@ namespace FuerstFinal1._0
             return oldCows;
         }
 
-        //Deletes a cow from the list of cows
-        public static List<CowClass> DeleteCow(List<CowClass> oldCows, int indexToDelete)
+        //Saves the cow list
+        public static void SaveCows(List<CowClass> oldCows)
         {
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
+
+            //Overwrite with first one
+            using (StreamWriter sr = new StreamWriter(path, false))
+            {
+                sr.WriteLine(oldCows[0].ID.ToString() + "," + oldCows[0].gender.ToString() + "," + oldCows[0].herd + "," +
+                    oldCows[0].birthday.Year.ToString() + "," + oldCows[0].birthday.Month.ToString() + "," + oldCows[0].birthday.Day.ToString() +
+                    "," + oldCows[0].birthweight.ToString() + oldCows[0].notes);
+            }
+
+            //Append with the rest - IN REAL PROJ TEST THAT THERE IS MORE THAN ONE ITEM IN LIST FIRST THEN DO THIS probably so no breaky
+            for (var i = 1; i < oldCows.Count; i++)
+            {
+                using (StreamWriter sr = new StreamWriter(path, true))
+                {
+                    sr.WriteLine(oldCows[i].ID.ToString() + "," + oldCows[i].gender.ToString() + "," + oldCows[i].herd + "," +
+                    oldCows[i].birthday.Year.ToString() + "," + oldCows[i].birthday.Month.ToString() + "," + oldCows[i].birthday.Day.ToString() +
+                    "," + oldCows[i].birthweight.ToString() + oldCows[i].notes);
+                }
+            }
+        }
+
+        //Deletes a cow from the list of cows
+        public static List<CowClass> DeleteCow(List<CowClass> oldCows, int cowIDToDelete)
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "COWTEST1.txt");
+
+            //Find the index of the cow that needs deleted
+            int indexToDelete = 99;
+
+            for (var i = 0; i < oldCows.Count; i++)
+            {
+                CowClass currentCow = oldCows[i];
+
+                if (currentCow.ID == cowIDToDelete)
+                {
+                    indexToDelete = i;
+                }
+            }
 
             oldCows.RemoveAt(indexToDelete);
 
