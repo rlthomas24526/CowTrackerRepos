@@ -36,7 +36,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.lblAnimalIDInfo = new System.Windows.Forms.Label();
             this.lblNotes = new System.Windows.Forms.Label();
-            this.rtbNotes = new System.Windows.Forms.RichTextBox();
+            this.tbNotes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -51,7 +51,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 340);
+            this.btnBack.Location = new System.Drawing.Point(12, 199);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 20;
@@ -61,7 +61,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(307, 340);
+            this.btnSave.Location = new System.Drawing.Point(319, 199);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 33;
@@ -71,7 +71,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(399, 340);
+            this.btnExit.Location = new System.Drawing.Point(439, 199);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 34;
@@ -81,7 +81,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(100, 340);
+            this.btnDelete.Location = new System.Drawing.Point(126, 199);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(114, 23);
             this.btnDelete.TabIndex = 35;
@@ -116,20 +116,19 @@
             this.lblNotes.TabIndex = 38;
             this.lblNotes.Text = "Notes";
             // 
-            // rtbNotes
+            // tbNotes
             // 
-            this.rtbNotes.Location = new System.Drawing.Point(126, 142);
-            this.rtbNotes.Name = "rtbNotes";
-            this.rtbNotes.Size = new System.Drawing.Size(307, 137);
-            this.rtbNotes.TabIndex = 39;
-            this.rtbNotes.Text = "";
+            this.tbNotes.Location = new System.Drawing.Point(126, 142);
+            this.tbNotes.Name = "tbNotes";
+            this.tbNotes.Size = new System.Drawing.Size(348, 20);
+            this.tbNotes.TabIndex = 39;
             // 
             // frmEditAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 385);
-            this.Controls.Add(this.rtbNotes);
+            this.ClientSize = new System.Drawing.Size(526, 248);
+            this.Controls.Add(this.tbNotes);
             this.Controls.Add(this.lblNotes);
             this.Controls.Add(this.lblAnimalIDInfo);
             this.Controls.Add(this.lblID);
@@ -156,6 +155,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblAnimalIDInfo;
         private System.Windows.Forms.Label lblNotes;
-        private System.Windows.Forms.RichTextBox rtbNotes;
+        private System.Windows.Forms.TextBox tbNotes;
     }
 }

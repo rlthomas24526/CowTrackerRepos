@@ -31,18 +31,18 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblParent = new System.Windows.Forms.Label();
             this.lblChild = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lstParent = new System.Windows.Forms.ListBox();
+            this.lstChild = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(122, 9);
+            this.lblTitle.Location = new System.Drawing.Point(24, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(263, 41);
             this.lblTitle.TabIndex = 3;
@@ -60,31 +60,15 @@
             // lblChild
             // 
             this.lblChild.AutoSize = true;
-            this.lblChild.Location = new System.Drawing.Point(28, 282);
+            this.lblChild.Location = new System.Drawing.Point(36, 245);
             this.lblChild.Name = "lblChild";
             this.lblChild.Size = new System.Drawing.Size(30, 13);
             this.lblChild.TabIndex = 5;
             this.lblChild.Text = "Child";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(110, 273);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(155, 21);
-            this.comboBox2.TabIndex = 7;
-            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(415, 419);
+            this.btnExit.Location = new System.Drawing.Point(212, 419);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 35;
@@ -94,7 +78,8 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(334, 419);
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(114, 419);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 36;
@@ -112,22 +97,41 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // lstParent
+            // 
+            this.lstParent.FormattingEnabled = true;
+            this.lstParent.Location = new System.Drawing.Point(88, 93);
+            this.lstParent.Name = "lstParent";
+            this.lstParent.Size = new System.Drawing.Size(120, 108);
+            this.lstParent.TabIndex = 38;
+            this.lstParent.SelectedIndexChanged += new System.EventHandler(this.lstParent_SelectedIndexChanged);
+            // 
+            // lstChild
+            // 
+            this.lstChild.FormattingEnabled = true;
+            this.lstChild.Location = new System.Drawing.Point(88, 245);
+            this.lstChild.Name = "lstChild";
+            this.lstChild.Size = new System.Drawing.Size(120, 108);
+            this.lstChild.TabIndex = 39;
+            this.lstChild.SelectedIndexChanged += new System.EventHandler(this.lstChild_SelectedIndexChanged);
+            // 
             // frmAddRelationship
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 454);
+            this.ClientSize = new System.Drawing.Size(330, 454);
+            this.Controls.Add(this.lstChild);
+            this.Controls.Add(this.lstParent);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblChild);
             this.Controls.Add(this.lblParent);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmAddRelationship";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddRelationship";
+            this.Load += new System.EventHandler(this.frmAddRelationship_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,10 +142,10 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblParent;
         private System.Windows.Forms.Label lblChild;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ListBox lstParent;
+        private System.Windows.Forms.ListBox lstChild;
     }
 }

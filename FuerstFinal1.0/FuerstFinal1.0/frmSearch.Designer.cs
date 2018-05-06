@@ -35,14 +35,7 @@
             this.lstCowList = new System.Windows.Forms.ListBox();
             this.lblID = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radMale = new System.Windows.Forms.RadioButton();
-            this.radFemale = new System.Windows.Forms.RadioButton();
-            this.lblBirthYear = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnViewCow = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -57,7 +50,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(617, 365);
+            this.btnExit.Location = new System.Drawing.Point(617, 198);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 36;
@@ -67,7 +60,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 365);
+            this.btnBack.Location = new System.Drawing.Point(15, 198);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 39;
@@ -77,7 +70,8 @@
             // 
             // btnEditThisCow
             // 
-            this.btnEditThisCow.Location = new System.Drawing.Point(365, 365);
+            this.btnEditThisCow.Enabled = false;
+            this.btnEditThisCow.Location = new System.Drawing.Point(337, 198);
             this.btnEditThisCow.Name = "btnEditThisCow";
             this.btnEditThisCow.Size = new System.Drawing.Size(141, 23);
             this.btnEditThisCow.TabIndex = 40;
@@ -90,13 +84,14 @@
             this.lstCowList.FormattingEnabled = true;
             this.lstCowList.Location = new System.Drawing.Point(394, 100);
             this.lstCowList.Name = "lstCowList";
-            this.lstCowList.Size = new System.Drawing.Size(277, 225);
+            this.lstCowList.Size = new System.Drawing.Size(277, 69);
             this.lstCowList.TabIndex = 41;
+            this.lstCowList.SelectedIndexChanged += new System.EventHandler(this.lstCowList_SelectedIndexChanged);
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(13, 100);
+            this.lblID.Location = new System.Drawing.Point(12, 123);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(52, 13);
             this.lblID.TabIndex = 42;
@@ -104,73 +99,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 92);
+            this.textBox1.Location = new System.Drawing.Point(124, 120);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(209, 20);
             this.textBox1.TabIndex = 43;
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(6, 16);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(42, 13);
-            this.lblGender.TabIndex = 44;
-            this.lblGender.Text = "Gender";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radMale);
-            this.groupBox1.Controls.Add(this.radFemale);
-            this.groupBox1.Controls.Add(this.lblGender);
-            this.groupBox1.Location = new System.Drawing.Point(16, 138);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(292, 41);
-            this.groupBox1.TabIndex = 45;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // radMale
-            // 
-            this.radMale.AutoSize = true;
-            this.radMale.Location = new System.Drawing.Point(135, 11);
-            this.radMale.Name = "radMale";
-            this.radMale.Size = new System.Drawing.Size(48, 17);
-            this.radMale.TabIndex = 46;
-            this.radMale.TabStop = true;
-            this.radMale.Text = "Male";
-            this.radMale.UseVisualStyleBackColor = true;
-            // 
-            // radFemale
-            // 
-            this.radFemale.AutoSize = true;
-            this.radFemale.Location = new System.Drawing.Point(69, 11);
-            this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(59, 17);
-            this.radFemale.TabIndex = 45;
-            this.radFemale.TabStop = true;
-            this.radFemale.Text = "Female";
-            this.radFemale.UseVisualStyleBackColor = true;
-            // 
-            // lblBirthYear
-            // 
-            this.lblBirthYear.AutoSize = true;
-            this.lblBirthYear.Location = new System.Drawing.Point(16, 204);
-            this.lblBirthYear.Name = "lblBirthYear";
-            this.lblBirthYear.Size = new System.Drawing.Size(53, 13);
-            this.lblBirthYear.TabIndex = 46;
-            this.lblBirthYear.Text = "Birth Year";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(85, 204);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 47;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnViewCow
             // 
-            this.btnViewCow.Location = new System.Drawing.Point(199, 365);
+            this.btnViewCow.Enabled = false;
+            this.btnViewCow.Location = new System.Drawing.Point(189, 198);
             this.btnViewCow.Name = "btnViewCow";
             this.btnViewCow.Size = new System.Drawing.Size(120, 23);
             this.btnViewCow.TabIndex = 48;
@@ -182,11 +120,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 400);
+            this.ClientSize = new System.Drawing.Size(704, 253);
             this.Controls.Add(this.btnViewCow);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.lblBirthYear);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lstCowList);
@@ -197,8 +132,7 @@
             this.Name = "frmSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSearch";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmSearch_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,12 +147,6 @@
         private System.Windows.Forms.ListBox lstCowList;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radMale;
-        private System.Windows.Forms.RadioButton radFemale;
-        private System.Windows.Forms.Label lblBirthYear;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnViewCow;
     }
 }
